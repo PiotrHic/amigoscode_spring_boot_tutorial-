@@ -11,21 +11,11 @@ import java.time.Month;
 import java.util.List;
 
 @SpringBootApplication
-@RestController
+
 public class AmigoscodeSpringBootTutorialApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AmigoscodeSpringBootTutorialApplication.class, args);
-    }
-
-    @GetMapping("/")
-    public List<Student> hello(){
-        return List.of(new Student(
-                1L,
-                "Piotr Hic",
-                "hicu@wp.pl",
-                25,
-                LocalDate.of(1991, Month.SEPTEMBER,17)));
     }
 
 }
