@@ -1,5 +1,6 @@
 package com.example.amigoscode_spring_boot_tutorial.model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,8 +12,21 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity
+@Table
 public class Student {
 
+    // patrz na te id itd. to trzeba postudiowac
+    @Id
+    @SequenceGenerator(
+            name="student_sequence",
+            sequenceName="student_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+        strategy = GenerationType.SEQUENCE,
+            generator = "student_sequence"
+    )
     private Long id;
     private String name;
     private String email;
