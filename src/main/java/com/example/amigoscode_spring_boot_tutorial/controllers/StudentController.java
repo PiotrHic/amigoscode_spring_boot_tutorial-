@@ -13,7 +13,6 @@ import java.util.List;
 @RestController
 @RequestMapping(path="api/v1/student")
 public class StudentController {
-
     private final StudentService studentService;
 
     public StudentController(StudentService studentService) {
@@ -24,6 +23,5 @@ public class StudentController {
     public List<Student> getStudents(){
         return studentService.getStudents();
     }
-
 
 }
