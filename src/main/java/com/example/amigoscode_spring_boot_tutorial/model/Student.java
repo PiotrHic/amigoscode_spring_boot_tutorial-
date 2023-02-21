@@ -40,6 +40,10 @@ public class Student {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public void sayHi(){
+        System.out.println("Siemka!");
+    }
+
     @Override
     public String toString() {
         return "Student{" +
