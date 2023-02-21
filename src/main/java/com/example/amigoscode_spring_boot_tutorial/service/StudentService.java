@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentService {
@@ -21,8 +22,13 @@ public class StudentService {
         // czyli wywoluje wszystko, co zostalo
         return studentRepository.findAll();
     }
-
+    // jest walidacja i jest optional, poczytaj o optional!
     public void addNewStudent(Student newStudent) {
-        System.out.println(newStudent);
+        Optional<Student> studentOptional = studentRepository.
+                findStudentsById(newStudent.getEmail());
+        if (studentOptional.isPresent()){
+            throw new IllegalStateException("email already taken");
+        }
+        studentRepository.save(newStudent);
     }
 }
