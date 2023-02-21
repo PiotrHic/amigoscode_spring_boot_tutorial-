@@ -22,12 +22,4 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-//    public List<Student> getStudents(){
-//        return List.of(new Student(
-//                1L,
-//                "Piotr Hic",
-//                "hicu@wp.pl",
-//                25,
-//                LocalDate.of(1991, Month.SEPTEMBER,17)));
-//    }
 }

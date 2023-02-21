@@ -17,16 +17,14 @@ public class StudentConfig {
     CommandLineRunner commandLineRunner(StudentRepository studentRepository){
         return args ->{
             Student piotrHic = new Student(
-                "Piotr Hic",
-                "hicu@wp.pl",
-                25,
+                    "Piotr Hic",
+                    "hicu@wp.pl",
                 LocalDate.of(1991, Month.SEPTEMBER,17)
             );
 
             Student igorKotelko = new Student(
                     "Igor Kotelko",
-                    "kotel@wp.pl",
-                    22,
+                    "kotel@wp.pl" ,
                     LocalDate.of(1991, Month.SEPTEMBER,9)
             );
 
